@@ -1,0 +1,144 @@
+:root {
+  --White: hsl(0, 0%, 100%);
+  --LightPink: hsl(275, 100%, 97%);
+  --GrayishPurple: hsl(292, 16%, 49%);
+  --DarkPurple: hsl(292, 42%, 14%);
+}
+@font-face {
+  font-family: "WorkSans-Regular";
+  src: url("assets/fonts/static/WorkSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "WorkSans-Bold";
+  src: url("assets/fonts/static/WorkSans-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "WorkSans-SemiBold";
+  src: url("assets/fonts/static/WorkSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+::-webkit-scrollbar{
+  display: none;
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    display: grid;
+    grid-template-rows: 200px auto;
+  }
+  .banner {
+    background-color: var(--DarkPurple);
+    background-image: url("./assets/images/background-pattern-mobile.svg");
+    background-position: center;
+    background-clip: content-box;
+    background-repeat: no-repeat;
+  }
+  .faqs {
+    max-width: 360px;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .container {
+    display: grid;
+    grid-template-rows: 200px auto;
+  }
+  .banner {
+    background-color: var(--DarkPurple);
+    background-image: url("./assets/images/background-pattern-desktop.svg");
+    background-position: center;
+    background-clip: content-box;
+    background-repeat: no-repeat;
+  }
+  .faqs {
+    width: 35%;
+    min-width: 380px;
+  }
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  font-size: 1em;
+}
+
+.banner {
+  border-bottom: 1px solid var(--GrayishPurple);
+}
+.main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: var(--LightPink);
+}
+.faqs {
+  height: fit-content;
+  position: relative;
+  top: -100px;
+  border-radius: 5px;
+  box-shadow: hsla(293, 16%, 49%, 0.253) 0px 7px 29px 0px;
+  background-color: var(--White);
+  padding: 35px 30px;
+}
+.top {
+  height: 60px;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+.top img {
+  width: 2em;
+  height: 2em;
+}
+.top h1 {
+  color: var(--DarkPurple);
+  font-family: "WorkSans-Bold";
+}
+
+.box {
+  padding: 0 0 20px 0;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.title p {
+  width: fit-content;
+  font-family: "WorkSans-SemiBold";
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.title p:hover {
+  color: var(--GrayishPurple);
+}
+
+.title img{
+  cursor: pointer;
+}
+
+.answer {
+  color: var(--GrayishPurple);
+  font-family: "WorkSans-Regular";
+  font-size: 15px;
+  height: 0;
+  overflow: hidden;
+  transition: all .3s linear;
+}
